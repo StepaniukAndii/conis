@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "mvn clean -P headless, selenoid -D suiteXmlFile=smoke test"
+                sh "mvn clean -P headless,selenoid -D suiteXmlFile=smoke test"
             }
             post {
                             // If Maven was able to run the tests, even if some of the test
